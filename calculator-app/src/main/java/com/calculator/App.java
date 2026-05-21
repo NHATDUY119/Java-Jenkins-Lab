@@ -21,7 +21,7 @@ public class App { // [cite: 891]
         System.out.println("Phep tru (10-5) = " + calc.subtract(10, 5)); // [cite: 924, 925]
         System.out.println("Phep nhan (10*5) = " + calc.multiply(10, 5)); // [cite: 927, 928]
         System.out.println("Phep chia (10/5) = " + calc.divide(10, 5)); // [cite: 930]
-        System.out.println("Tran Nhat Duy đang test");
+        System.out.println("Tran Nhat Duy đang test bai thuc hanh 10");
         System.out.println("==================================="); // [cite: 932]
     }
 }
