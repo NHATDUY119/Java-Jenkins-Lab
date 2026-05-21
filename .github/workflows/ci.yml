@@ -1,0 +1,27 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ] # Chạy mỗi khi push code lên branch main
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Sử dụng máy ảo Ubuntu của GitHub
+
+    steps:
+    - uses: actions/checkout@v4 # Bước 1: Lấy code từ kho về máy ảo
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4 # Bước 2: Cài đặt Java
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build and Test with Maven
+      run: |
+        cd calculator-app
+        mvn clean test # Bước 3: Chạy Unit Test
+        mvn exec:java -Dexec.mainClass="com.calculator.App" # Bước 4: Chạy thuật toán (Xem kết quả)
