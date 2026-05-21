@@ -24,4 +24,4 @@ jobs:
       run: |
         cd calculator-app
         mvn clean test # Bước 3: Chạy Unit Test
-        mvn exec:java -Dexec.mainClass="com.calculator.App" # Bước 4: Chạy thuật toán (Xem kết quả)
+        # mvn exec:java -Dexec.mainClass="com.calculator.App" # Bước 4: Chạy thuật toán (Xem kết quả)
